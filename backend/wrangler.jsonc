@@ -1,0 +1,32 @@
+{
+  "name": "apiv2",
+  "main": "src/worker.js",
+  "workers_dev": true,
+  "preview_urls": false,
+  "compatibility_date": "2026-01-01",
+
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "persist": true,
+      "invocation_logs": true
+    },
+    "traces": {
+      "enabled": false,
+      "persist": true,
+      "head_sampling_rate": 1
+    }
+  },
+
+  // 🔽 D1 DATABASE BINDING
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "faltudb",
+      "database_id": "8e86d0b8-f12d-4438-a68d-62a759387eec"
+    }
+  ]
+}
